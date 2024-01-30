@@ -9,7 +9,7 @@ https://github.com/w3ye/crypto-table/assets/33244107/d4271fdb-c83a-45c0-a7d9-a86
 - Run `cp .env.example .env` in your terminal
 - Paste in your Coin Market Cap API key `VITE_COIN_MARKET_CAP_API_KEY`
 
-## Docker
+## Docker - Recommended
 - Run `docker compose up --build` to start the app
 
 ## Local
@@ -18,6 +18,7 @@ https://github.com/w3ye/crypto-table/assets/33244107/d4271fdb-c83a-45c0-a7d9-a86
 
 # Technologies used
 - Vite
+- Node v16.16.16
 - React/TypeScript
 - mantine
 - axios
