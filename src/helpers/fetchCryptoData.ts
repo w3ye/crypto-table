@@ -1,10 +1,12 @@
 import axios from "axios";
 import { LatestListingResponse } from "../types/response";
 
-export const fetchLatestCrypto = async (): Promise<LatestListingResponse[]> => {
+export const fetchLatestCrypto = async (
+  start: number = 1
+): Promise<LatestListingResponse[]> => {
   const response = await axios.get("/api/v1/cryptocurrency/listings/latest", {
     params: {
-      start: 1,
+      start,
       limit: 10,
     },
     headers: {
