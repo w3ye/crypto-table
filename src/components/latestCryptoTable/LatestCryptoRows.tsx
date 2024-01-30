@@ -1,4 +1,4 @@
-import { Flex, Table } from "@mantine/core";
+import { Avatar, Flex, Table } from "@mantine/core";
 import { LatestListingResponse } from "../../types/response";
 
 type LatestCryptoRowsProps = {
@@ -9,11 +9,14 @@ export const LatestCryptoRows = ({ latestCrypto }: LatestCryptoRowsProps) => {
     return (
       <Table.Tr key={crypto.id}>
         <Table.Td>
-          <Flex direction="column">
-            <div style={{ fontWeight: "bold", fontSize: "16px" }}>
-              {crypto.name}
-            </div>
-            <div>{crypto.symbol}</div>
+          <Flex gap="sm">
+            <Avatar src={crypto.logo} />
+            <Flex direction="column">
+              <div style={{ fontWeight: "bold", fontSize: "16px" }}>
+                {crypto.name}
+              </div>
+              <div>{crypto.symbol}</div>
+            </Flex>
           </Flex>
         </Table.Td>
         <Table.Td>{crypto.quote.USD.price}</Table.Td>
