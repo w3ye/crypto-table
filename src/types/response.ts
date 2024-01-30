@@ -40,4 +40,5 @@ export type LatestListingResponse = {
       tvl?: null;
     };
   };
+  logo?: string;
 };

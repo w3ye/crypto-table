@@ -1,9 +1,14 @@
 import { Table } from "@mantine/core";
 import { LatestCryptoRows } from "./LatestCryptoRows";
-import { mockCryptoData } from "../../mock/mockLatestCryptoData";
+import { LatestListingResponse } from "../../types/response";
+import { useEffect } from "react";
 
-export const LatestCryptoTable = () => {
-  const latestCrypto = mockCryptoData;
+type LatestCryptoTableProps = {
+  latestCrypto: LatestListingResponse[];
+};
+
+export const LatestCryptoTable = ({ latestCrypto }: LatestCryptoTableProps) => {
+  useEffect(() => {}, [latestCrypto]);
   return (
     <Table>
       <Table.Thead>

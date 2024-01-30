@@ -11,5 +11,6 @@ export const fetchLatestCrypto = async (): Promise<LatestListingResponse[]> => {
       "X-CMC_PRO_API_KEY": import.meta.env.VITE_COIN_MARKET_CAP_API_KEY,
     },
   });
+
   return response.data.data;
 };
