@@ -19,9 +19,9 @@ export const LatestCryptoRows = ({ latestCrypto }: LatestCryptoRowsProps) => {
             </Flex>
           </Flex>
         </Table.Td>
-        <Table.Td>{crypto.quote.USD.price}</Table.Td>
+        <Table.Td>$ {crypto.quote.USD.price}</Table.Td>
         <Table.Td>$ {crypto.quote.USD.market_cap.toFixed(2)}</Table.Td>
-        <Table.Td>{crypto.circulating_supply.toFixed(2)}</Table.Td>
+        <Table.Td>$ {crypto.circulating_supply.toFixed(2)}</Table.Td>
         <Table.Td>
           <div
             style={{
