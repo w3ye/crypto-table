@@ -1,4 +1,4 @@
-import { Avatar, Flex, Table } from "@mantine/core";
+import { Avatar, Flex, Progress, Table } from "@mantine/core";
 import { LatestListingResponse } from "../../types/response";
 
 type LatestCryptoRowsProps = {
@@ -39,6 +39,10 @@ export const LatestCryptoRows = ({ latestCrypto }: LatestCryptoRowsProps) => {
             }}
           >
             {(crypto.quote.USD.percent_change_24h * 100).toFixed(2)}
+            <Progress
+              color={crypto.quote.USD.percent_change_24h > 0 ? "green" : "red"}
+              value={Math.abs(crypto.quote.USD.percent_change_24h * 100)}
+            />
           </div>
         </Table.Td>
       </Table.Tr>
