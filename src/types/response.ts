@@ -12,9 +12,16 @@ export type LatestListingResponse = {
   last_updated: string;
   date_added: string;
   tags: string[];
-  platform: null | string;
+  platform: {
+    id: number;
+    name: string;
+    symbol: string;
+    slug: string;
+    token_address: string;
+  } | null;
   self_reported_circulating_supply: null | number;
   self_reported_market_cap: null | number;
+  tvl_ratio?: null;
   quote: {
     USD: {
       price: number;
@@ -22,23 +29,15 @@ export type LatestListingResponse = {
       volume_change_24h: number;
       percent_change_1h: number;
       percent_change_24h: number;
+      percent_change_30d: number;
+      percent_change_60d: number;
       percent_change_7d: number;
+      percent_change_90d: number;
       market_cap: number;
       market_cap_dominance: number;
       fully_diluted_market_cap: number;
       last_updated: string;
-    };
-    BTC: {
-      price: number;
-      volume_24h: number;
-      volume_change_24h: number;
-      percent_change_1h: number;
-      percent_change_24h: number;
-      percent_change_7d: number;
-      market_cap: number;
-      market_cap_dominance: number;
-      fully_diluted_market_cap: number;
-      last_updated: string;
+      tvl?: null;
     };
   };
 };
